@@ -1,0 +1,45 @@
+  public static void main(String[] args) {
+         // Membuat objek mobil
+        Mobil mobil1 = new Mobil("Toyota", "Supra", 1993, "Orange");
+        Mobil mobil2 = new Mobil("Nissan", "GT-R R34", 1999, "Putih");
+ 
+        // Menampilkan informasi mobil
+        mobil1.displayInfo();
+        mobil2.displayInfo();
+ 
+        // Mengubah warna mobil
+        mobil1.setWarna("Orange");
+        mobil2.setWarna("Putih");
+ 
+        // Menampilkan informasi mobil setelah perubahan warna
+        mobil1.displayInfo();
+        mobil2.displayInfo();
+    }
+ 
+    static class Mobil {
+        private String merk;
+        private String model;
+        private int tahun;
+        private String warna;
+ 
+        public Mobil(String merk, String model, int tahun, String warna) {
+            this.merk = merk;
+            this.model = model;
+            this.tahun = tahun;
+            this.warna = warna;
+        }
+ 
+        public void setWarna(String warna) {
+            this.warna = warna;
+        }
+ 
+        public void displayInfo() {
+            System.out.println("Merk: " + merk);
+            System.out.println("Model: " + model);
+            System.out.println("Tahun: " + tahun);
+            System.out.println("Warna: " + warna);
+            System.out.println();
+        }
+    }
+}
+       
