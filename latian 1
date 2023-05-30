@@ -1,0 +1,57 @@
+  */
+    public static void main(String[] args) {
+         sayHello(); // memanggil metode sayHello()
+ 
+        // Perintah berikut memanggil
+        // metode sayHelloTo(String nama), dengan
+        // memberi nilai "Budi" untuk variabel nama
+        sayHelloTo("Budi");
+ 
+        // Berikut ini, nilai variabel nama
+        // adalah "George"
+        String namaMahasiswa = "Gusti";
+        sayHelloTo(namaMahasiswa);
+ 
+        // Di bawah ini memanggil metode
+        // inputNilaiInteger(String namaVariabel)
+        // untuk memberikan nilai variabel varInteger
+        // melalui input dari user, di metode tersebut
+        int varInteger = inputNilaiInteger("var Integer");
+        System.out.println("Nilai varInteger sekarang = " + varInteger);
+    }
+ 
+    static void sayHello() {
+        System.out.println("Hello, ini fungsi void");
+        System.out.println("Fungsi void tidak ada return");
+        System.out.println("Fungsi ini tanpa parameter,"
+                + " ditandai dengan tanda kurung "
+                + "yaitu () tanpa deklarasi "
+                + "variabel di dalamnya, "
+                + "yang berarti fungsi ini tidak "
+                + "menerima data ketika dipanggil "
+                + "dari luar");
+        System.out.println();
+    }
+ 
+    static void sayHelloTo(String nama) {
+        System.out.println("Hello " + nama);
+        System.out.println("Fungsi void tidak ada return");
+        System.out.println("Dengan parameter String nama,\n"
+                + "Berarti mendapat data bertipe "
+                + "String ketika dipanggil");
+        System.out.println();
+    }
+ 
+    static int inputNilaiInteger(String namaVariabel) {
+        Scanner inputScanner = new Scanner(System.in);
+        int nilaiInput;
+        System.out.println("Deklarasi fungsi ini tanpa "
+                + "keyword void,\n"
+                + "jadi menggunakan tipe int,\n"
+                + "sehingga ada return nilai int");
+        System.out.println("Silakan input " + namaVariabel);
+        nilaiInput = inputScanner.nextInt();
+        return nilaiInput; // nilaiInput bertipe int sebagai nilai return
+    }
+}
+    
